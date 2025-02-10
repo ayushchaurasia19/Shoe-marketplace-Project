@@ -8,7 +8,7 @@
 body {
     background-color: black;
     color: white; 
-    background-image: url("background.webp");
+    /* background-image: url("background.webp"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -94,6 +94,7 @@ p {
     position: sticky;
     z-index: 1000;
     top: 102px;
+    border-top: 1px solid #25282A;
 }
 .clickable-image{
     cursor: pointer;
@@ -102,7 +103,8 @@ p {
     border-radius: 10px;
 }
 .carousel-item img{
-    height: 78vh;
+    margin-top: 5vh;
+    height: 65vh;
 }
 .shoe-row{
     display: flex;
@@ -157,7 +159,7 @@ p {
     background: transparent;
     border-radius: 30px;
     border: 5px solid #ccc;
-    padding: 10px; /* Control the gap */
+    padding: 10px; 
     mask: 
         conic-gradient(#000 0 0) content-box,
         linear-gradient(calc(mod(var(--a),180deg)*var(--i) + var(--_a,45deg)),
@@ -208,10 +210,10 @@ p {
     .text:hover {
     text-shadow: 0 4px 6px rgba(255, 165, 0, 0.6);
     }
-.buy-now{
-    width:auto;
-    height: 400px;
-}
+    .buy-now{
+        width:auto;
+        height: 400px;
+    }
     
 
 .text p{
@@ -241,6 +243,7 @@ p {
 }
 .release-bar{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 4vw;
@@ -253,8 +256,8 @@ p {
     border: 1px solid white;
     border-radius: 10px;
 }
-.release-bar img{
-    width: 19vh;
+.release-item img{
+    width: 11vh;
     height: 13vh;
     margin: 1vh auto;
     border-radius: 10px;
@@ -263,6 +266,14 @@ p {
     margin-top: 5px;
     margin-left: 1vh;
 }
+
+.owl-carousel .owl-item img {
+    width: 19vh;
+    height: 13vh;
+    margin: 1vh auto;
+    border-radius: 10px;
+}
+
 @keyframes appear{
     from{
         opacity: 0;
@@ -275,5 +286,5 @@ p {
 .block{
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 30%;
 }

@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>OnlyShoes Front page</title>
     <link rel="stylesheet" href="front-page.css">
 </head>
@@ -44,13 +46,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="adidas-logo.jpg" class="d-block w-100" alt="...">
+            <img src="nike-carousel.webp" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="jordan-logo.jpg" class="d-block w-100" alt="...">
+            <img src="puma-carousel.webp" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="nike-logo.jpg" class="d-block w-100" alt="...">
+            <img src="adidas-carousel.webp" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -63,7 +65,7 @@
         </button>
     </div>
     <div class="block">
-        <h4 style="margin:20px 40px">Recommended For You</h4>
+        <h4 style="margin:15vh 20px 40px">Recommended For You</h4>
         <div class="shoe-row">
             <a href="" class="shoe-anchor">
                 <div class="shoe">
@@ -126,62 +128,149 @@
                 </div>
             </a>
         </div>
+    </div>
+    <div class="block">
         <div class="buy-now">
             <div class="text">
                 <div class="text alt"><p style="font-family: 'Caveat', 'Dancing Script', 'Patrick Hand', cursive;"><b>OnlyShoes</b></p></div>
             </div>
         </div>
-        <h4 style="margin:20px 40px">Release Calendar</h4>
+    </div>
+
+    <div class="block">
+        <h4 style="margin:0 30px 40px">Release Calendar</h4>
         <div class="release-bar">
-            <div class="release-item">
-                <p style="font-size: 28px">Feb | 5</p>
-                <img src="Palace-reflecto.avif" alt="">
-                <p>Palace Reflecto 1/4 Zip</p>
-                <p>Gray Marl</p>
-                <div class="button">
-                    <button>Notify me</button>
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px">Feb | 5</p>
+                        <img src="Palace-reflecto.avif" alt="">
+                        <p>Palace Reflecto 1/4 Zip</p>
+                        <p>Gray Marl</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="release-item">
-                <p style="font-size: 28px">Feb | 14</p>
-                <img src="nike-air-max-1.avif" alt="">
-                <p>Nike Air Max 1 PRM</p>
-                <p>Valentine’s Day Black</p>
-                <div class="button">
-                    <button>Notify me</button>
+
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px">Feb | 14</p>
+                        <img src="nike-air-max-1.avif" alt="">
+                        <p>Nike Air Max 1 PRM</p>
+                        <p>Valentine’s Day Black</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="release-item">
-                <p style="font-size: 28px">Feb | 27</p>
-                <img src="nike-logo.jpg" alt="">
-                <p>Palace Reflecto 1/4 Zip</p>
-                <p>Gray Marl</p>
-                <div class="button">
-                    <button>Notify me</button>
+
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px">Feb | 27</p>
+                        <img src="nike-logo.jpg" alt="">
+                        <p>Palace Reflecto 1/4 Zip</p>
+                        <p>Gray Marl</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="release-item">
-                <p style="font-size: 28px">Mar | 6</p>
-                <img src="nike-logo.jpg" alt="">
-                <p>Palace Reflecto 1/4 Zip</p>
-                <p>Gray Marl</p>
-                <div class="button">
-                    <button>Notify me</button>
+
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px">Mar | 6</p>
+                        <img src="nike-logo.jpg" alt="">
+                        <p>Palace Reflecto 1/4 Zip</p>
+                        <p>Gray Marl</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="release-item">
-                <p style="font-size: 28px; font-weight:bolder;">Mar | 17</p>
-                <img src="Palace-cap.avif" alt="">
-                <p>Palace Cobra 6-Panel</p>
-                <p>Black</p>
-                <div class="button">
-                    <button>Notify me</button>
+
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px; font-weight:bolder;">Mar | 17</p>
+                        <img src="Palace-cap.avif" alt="">
+                        <p>Palace Cobra 6-Panel</p>
+                        <p>Black</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px; font-weight:bolder;">Mar | 17</p>
+                        <img src="Palace-cap.avif" alt="">
+                        <p>Palace Cobra 6-Panel</p>
+                        <p>Black</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px; font-weight:bolder;">Mar | 17</p>
+                        <img src="Palace-cap.avif" alt="">
+                        <p>Palace Cobra 6-Panel</p>
+                        <p>Black</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px; font-weight:bolder;">Mar | 17</p>
+                        <img src="Palace-cap.avif" alt="">
+                        <p>Palace Cobra 6-Panel</p>
+                        <p>Black</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px; font-weight:bolder;">Mar | 17</p>
+                        <img src="Palace-cap.avif" alt="">
+                        <p>Palace Cobra 6-Panel</p>
+                        <p>Black</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="release-item">
+                        <p style="font-size: 28px; font-weight:bolder;">Mar | 17</p>
+                        <img src="Palace-cap.avif" alt="">
+                        <p>Palace Cobra 6-Panel</p>
+                        <p>Black</p>
+                        <div class="button">
+                            <button>Notify me</button>
+                        </div>
+                    </div>
+                </div>       
             </div>
         </div>
     </div>
 
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="front-page.js"></script>
+
 </body>
 </html>
