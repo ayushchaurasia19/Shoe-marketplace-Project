@@ -4,10 +4,7 @@ $(document).ready(function(){
         margin: 10,         
         nav: true,          
         autoplay: false,    
-        autoplayTimeout: 2500, 
         responsive:{
-            0:{ items: 1 },
-            600:{ items: 2 },
             1000:{ items: 5 }
         }
     });

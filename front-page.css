@@ -158,7 +158,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #25282A; */
     overflow: hidden;
     border-radius: 20px;
     margin: 7vh auto;
