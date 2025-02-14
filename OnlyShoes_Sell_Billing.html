@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>OnlyShoes Sell Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans", serif;
+        }
+        body {
+            background-color: black;
+            color: white; 
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 0rem;
+        }
+        .header{
+            flex:10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5vh;
+        }
+        .top-bar{
+            width: 100%;
+            background: #000;
+            padding: 2vh 1vw;
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+            position: sticky;
+            z-index: 1000;
+            top: 0;
+        }
+.search-bar{
+    flex:1;
+    width: 500vh;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: #41474A;
+}
+.search-bar input{
+    background: transparent;
+    outline: none;
+    flex: 1;
+    border: 0;
+    color:aliceblue;
+}
+.search-bar button img{
+    width: 20px;
+}
+.search-bar button{
+    border:0;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #41474A;
+}
+        .items{
+            flex: 1;
+            display: flex;
+            gap: 35px;
+            list-style-type:none;
+            justify-content: right;
+            /* padding-left: 5%; */
+        }
+        .items a{
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bold;
+        }
+        .btn{
+            background-color: #000;
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding:0 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .brands-bar{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            width: 100%;
+            height: 80px;
+            gap: 60px;
+            position: sticky;
+            z-index: 1000;
+            top: 90px;
+        }
+        .clickable-image{
+            cursor: pointer;
+            width: 75px;
+            height:50px;
+            border-radius: 10px;
+        }
+        .carousel-item img{
+            height: 400px;
+            width: 800px;
+        }
+        .shoe-row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+        .shoe{
+            background-color: #25282A;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .shoe img{
+            width: 140px;
+            height: 95px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .button {
+            text-align: center;
+        }
+        .button button {
+            padding: 12px 42px;
+            border-radius: 15px;
+            background-color: rgb(216, 236, 253);
+            color: rgb(14, 150, 234);
+            font-size: 10px;
+            margin-top: 7px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .button button:hover {
+            background-color: rgb(194, 225, 246);
+            color: rgb(10, 136, 214);
+        }
+        .row{
+            display:flex;
+        }
+        .column{
+            flex:50;
+            padding:5px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right:auto;
+            position:sticky;
+            bottom:0;
+            border: white;
+            background-color: #000;
+            border-top-width: 5px;
+            border-top-color: #25282A;
+        }
+
+        footer button {
+            flex: 1;
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin: 0 5px;
+        }
+        .cancel {
+            background: none;
+            color: white;
+            border: 1px solid white;
+        }
+        .next {
+            background: #34eb67;
+            color: black;
+        }
+        /* Main Section */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    /* max-width: 1000px; */
+    margin: 0px 10% ;
+
+    /* gap: 20vh; */
+    padding-top:0px;
+}
+
+/* Product Details */
+.product {
+    display:flex;
+    flex-direction: column;
+    flex: 5.4;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+.product img {
+    margin:0;
+    object-fit: cover;
+    width: 80%;
+    height:auto;
+    /* max-width: 150%; */
+    /* max-height: 100% */
+    
+}
+
+.product h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.size {
+    background: #333;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin:10px;
+}
+
+/* .product::after {
+    content: "";
+    position: absolute;
+    top: 16%;
+    bottom: 0%;
+    left: 47%; 
+    transform: translateX(-50%); 
+    width: 1px;
+    height: 96.5vh; 
+    background-color: #ccc; 
+} */
+
+/* Pricing Section */
+.pricing {
+    flex:5;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    /* min-width:70vh; */
+}
+
+.pricing h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit {
+    color: #34eb67;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.price-input {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.price-input span {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.price-input input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 80px;
+    outline: none;
+}
+
+.name-input{
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.name-input input{
+    background: none;
+    border: none;
+}
+
+.name-input_z{
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    float:right;
+    width:49%
+}
+
+.name-input_z input{
+    background: none;
+    border: none;
+}
+
+.name-input_s{
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    float:left;
+    width:49%
+}
+
+.name-input_s input{
+    background: none;
+    border: none;
+}
+
+.side{
+    overflow:hidden;
+}
+
+.option {
+    flex: 1;
+    background: #333;
+    padding: 15px;
+    margin: 0 5px;
+    border: none;
+    color: #34eb67;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option.active {
+    background: #34eb67;
+    color: black;
+}
+
+.option span {
+    display: block;
+    font-size: 0.8rem;
+    color: #34eb67;
+}
+
+/* Payout */
+.payout {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.amount {
+    color: #34eb67;
+    font-size: 1.2rem;
+}
+
+.billing{
+    padding:20px;
+    background-color: #000;
+    border-radius: 10px;
+    align-items: center;
+    margin:10px;
+}
+
+.return{
+    padding:20px;
+    background-color: #000;
+    border-radius: 10px;
+    align-items: center;
+    margin:10px;
+}
+
+.discount{
+    padding:20px;
+    background-color: #000;
+    border-radius: 10px;
+    align-items: center;
+    margin:10px;
+}
+
+.payment{
+    padding:20px;
+    background-color: #000;
+    border-radius: 10px;
+    align-items: center;
+    margin:10px;
+}
+
+.space{
+    padding:30px;
+    background-color: #000;
+    border-radius: 10px;
+    align-items: center;
+}
+.line{
+    width:2px;
+    background-color: white;
+    height:600px;
+    margin:0px 20px;
+    
+}
+.dropdown{
+    background: #333;
+    color:white;
+    font-size:x-large;
+    border-radius:5px;
+    padding:10px;
+    border:none;
+}
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="OnlyShoes logo.jpeg" alt="OnlyShoes logo" width="150vw" height="70vh" style="border-radius: 20px; flex:1;">
+        <div class="header">
+            <form action="" class="search-bar">
+                <input type="text" placeholder="Search for shoes...">
+                <button type="submit"><img src="search.png" alt="search-button"></button>
+            </form>
+            <div class="items">
+                <li><a href="">FAQ</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Help</a></li>
+                <li><a href="">Buy</a></li>
+                <li><img src="bell.png" alt="bell icon" width="30px" height="30px"style="cursor:pointer;"></li>
+                <button class="btn">Login</button>
+                <button class="btn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <hr style="margin:0px;">
+    <main>
+        <div class="product">
+            <img src="travisscott.jpg" alt="Jordan 1 Retro Low OG SP Travis Scott Reverse Mocha" style="border-radius:10px;">
+            <h1>Jordan 1 Retro Low OG SP Travis Scott Reverse Mocha</h1>
+            <p class="size">Size: US Men's 7</p>
+        </div>
+
+        <div class="line">
+
+        </div>
+        
+        <div class="pricing">
+            <h3>Billing</h3>
+            <h5>Please provide your billing info</h5>
+            <br>
+            <h4><b>Billing Address</b></h4>
+            <h6>Please enter the address associated with this card</h6>
+            <div class="name-input">
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="name-input">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="name-input">
+                <input type="text" placeholder="Address">
+            </div>
+            <div class="name-input">
+                <input type="text" placeholder="Address 2">
+            </div>
+            <div class="name-input">
+                <input type="text" placeholder="City">
+            </div>
+            <div class="side">
+                <div class="name-input_s">
+                    <input type="text" placeholder="State">
+                </div>
+                <div class="name-input_z">
+                    <input type="text" placeholder="Zip Code">
+                </div>
+            </div>
+            <div class="name-input">
+                <input type="text" placeholder="Phone Number">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button class="cancel">Cancel</button>
+        <button class="next">Next</button>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
