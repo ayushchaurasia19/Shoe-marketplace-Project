@@ -71,6 +71,7 @@ p {
     gap: 35px;
     list-style-type:none;
     justify-content: right;
+    /* padding-left: 5%; */
 }
 
 .items a{
